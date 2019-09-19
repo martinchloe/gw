@@ -1,0 +1,28 @@
+{
+  "connection": "default",
+  "collectionName": "trips",
+  "info": {
+    "name": "trip",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "trip_name": {
+      "required": true,
+      "type": "string"
+    },
+    "categorie": {
+      "required": true,
+      "type": "string"
+    },
+    "pois": {
+      "collection": "poi",
+      "dominant": true,
+      "via": "trips"
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "connection": "default",
+  "collectionName": "pois",
+  "info": {
+    "name": "poi",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "comment": ""
+  },
+  "attributes": {
+    "latitude": {
+      "type": "float",
+      "required": true
+    },
+    "longitude": {
+      "type": "float",
+      "default": "",
+      "required": true
+    },
+    "name": {
+      "default": "",
+      "required": true,
+      "type": "string"
+    },
+    "description": {
+      "required": true,
+      "type": "text"
+    },
+    "medias": {
+      "type": "json"
+    },
+    "trips": {
+      "collection": "trip",
+      "via": "pois"
+    },
+    "visited": {
+      "type": "boolean"
+    }
+  }
+}
